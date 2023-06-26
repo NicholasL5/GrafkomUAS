@@ -161,6 +161,8 @@ public class Sphere extends Circle{
         //coba fog
         uniformsMap.setUniform("skyColor", new Vector3f(0.5f,0.5f,0.5f));
 
+        uniformsMap.setUniform("lampColor", new Vector3f(1f,1f,1f));
+
 //        int id = 0;
 //        if(useFakeLightning){
 //            id = 1;

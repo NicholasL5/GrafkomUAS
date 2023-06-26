@@ -428,6 +428,33 @@ public class Main {
         objects.get(10).scaleObject(2.5f,2.5f,2.5f);
         objects.get(10).translateObject(-4.240E+2f,  0.000E+0f, -3.101E+2f);
 
+        //titan
+//        player = new Player(
+//                Arrays.asList(
+//                        new ShaderProgram.ShaderModuleData(
+//                                "resources/shaders/scene.vert"
+//                                , GL_VERTEX_SHADER),
+//                        new ShaderProgram.ShaderModuleData(
+//                                "resources/shaders/scene.frag"
+//                                , GL_FRAGMENT_SHADER)
+//                ),
+//                new ArrayList<>(
+//                        List.of(
+//                                new Vector3f(-0.5f,0.5f,0.0f),
+//                                new Vector3f(-0.5f,-0.5f,0.0f),
+//                                new Vector3f(0.5f,-0.5f,0.0f),
+//                                new Vector3f(0.5f,0.5f,0.0f)
+//                        )
+//                ),
+//                // warna
+//                new Vector4f(0.0f,1.0f,0.0f,1.0f),
+//                //centerpoint
+//                Arrays.asList(0.0f,0.0f,0.0f),
+//                0.125f,
+//                0.125f,
+//                0.125f, "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\manusia1.obj",
+//                "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\textureManusia.PNG"
+//        );
 
         player = new Player(
                 Arrays.asList(
@@ -452,8 +479,8 @@ public class Main {
                 Arrays.asList(0.0f,0.0f,0.0f),
                 0.125f,
                 0.125f,
-                0.125f, "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\manusia1.obj",
-                "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\Skybox_texture\\textureManusia.PNG"
+                0.125f, "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\kerenv2.obj",
+                "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\Base_Color_Black.png"
         );
 
         player.scaleObject(2.5f, 2.5f,2.5f);
@@ -477,7 +504,8 @@ public class Main {
         float move = 0.5f;
         if (window.isKeyPressed(GLFW_KEY_3)) {
             Vector3f objek = player.updateCenterPoint();
-            camera.setPosition(objek.x, objek.y + 15, objek.z - 18);
+//            camera.setPosition(objek.x, objek.y + 15, objek.z - 18);
+            camera.setPosition(objek.x, objek.y + 5, objek.z - 8);
 
             TPP = true;
             freeCamera = false;
@@ -661,11 +689,6 @@ public class Main {
                 camera.setPosition(xnow + target.x, ynow + target.y, znow + target.z);
             }
         }
-//
-//        if(window.getMouseInput().getScroll().y != 0){
-//            projection.setFOV(projection.getFOV() - (window.getMouseInput().getScroll().y * 0.01f));
-//            window.getMouseInput().setScroll(new Vector2f());
-//        }
 
         if (window.isKeyPressed(GLFW_KEY_P)) {
             System.out.println(player.updateCenterPoint());
