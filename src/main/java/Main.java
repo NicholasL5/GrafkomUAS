@@ -18,7 +18,7 @@ public class Main {
     private Window window =
         new Window(1600,1600,
                 "Hello World");
-    ArrayList<Object> objects
+    ArrayList<Sphere> objects
             = new ArrayList<>();
     ArrayList<Sphere> grass = new ArrayList<>();
     Random random = new Random();
@@ -90,7 +90,8 @@ public class Main {
                 0.125f,
                 0.125f,
                 "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\stall.obj",
-                "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\stallTexture.png"
+                "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\stallTexture.png",
+                1
         ));
         objects.get(0).rotateObject((float) Math.toRadians(180f),0f,  1f, 0f);
         objects.get(0).translateObject(-4.240E+2f,  0.000E+0f, -3.081E+2f);
@@ -124,7 +125,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\rumah5.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\Farmhouse_Texture.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\Farmhouse_Texture.png",
+                        0
                 )
         );
         objects.get(1).translateObject(-418f, 0f, -220f);
@@ -156,7 +158,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\rumah_low.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\TEX\\color_palette.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\TEX\\color_palette.png",
+                        0
                 )
         );
         objects.get(2).rotateObject((float) Math.toRadians(135),0.0f,1.0f,0.0f);
@@ -189,7 +192,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\lamp.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\lampu\\lamp.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\lampu\\lamp.png",
+                        1
                 )
         );
         objects.get(3).translateObject(-4.355E+2f,  0f, -3.147E+2f);
@@ -221,7 +225,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\campfirejadi3.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\lampu\\camfire.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\lampu\\camfire.png",
+                        1
                 )
         );
         objects.get(4).translateObject(-418f,  0.000E+0f, -2.689E+2f);
@@ -253,7 +258,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\rumah7.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\rumah7.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\rumah7.png",
+                        0
                 )
         );
 
@@ -288,7 +294,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\lamp.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\lampu\\lamp.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\lampu\\lamp.png",
+                        1
                 )
         );
         objects.get(6).translateObject(-3.341E+2f,  0f, -2.557E+2f);
@@ -320,7 +327,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\lamp.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\lampu\\lamp.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\lampu\\lamp.png",
+                        1
                 )
         );
         objects.get(7).translateObject(-4.445E+2f,  0f, -1.915E+2f);
@@ -352,7 +360,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\rumahtukang.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\rumahtukang.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\rumahtukang.png",
+                        0
                 )
         );
 
@@ -387,7 +396,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\rumah7.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\rumah7.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\rumah7.png",
+                        0
                 )
         );
 
@@ -421,7 +431,8 @@ public class Main {
                         0.125f,
                         0.125f,
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\kerenv2.obj",
-                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\Base_Color_Black.png"
+                        "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\Base_Color_Black.png",
+                        1
                 )
         );
 
@@ -480,7 +491,8 @@ public class Main {
                 0.125f,
                 0.125f,
                 0.125f, "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\objects\\kerenv2.obj",
-                "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\Base_Color_Black.png"
+                "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\Base_Color_Black.png",
+                1
         );
 
         player.scaleObject(2.5f, 2.5f,2.5f);
@@ -686,6 +698,7 @@ public class Main {
                 float ynow = sub.y;
                 float znow = (float) ((-sub.x * Math.sin((float) -Math.toRadians(displayVector.y * 0.1f))) +
                         (sub.z * Math.cos((float) -Math.toRadians(displayVector.y * 0.1f))));
+
                 camera.setPosition(xnow + target.x, ynow + target.y, znow + target.z);
             }
         }
@@ -698,8 +711,12 @@ public class Main {
             if (player.updateCenterPoint().y > 0) {
                 player.translateObject(0f, -move, 0f);
             }
+        }
 
-
+        for (int i = 0; i<objects.size(); i ++){
+            if (player.calculateDistance(objects.get(i))){
+                System.out.println("collision");
+            }
         }
     }
 

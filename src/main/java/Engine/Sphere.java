@@ -35,11 +35,14 @@ public class Sphere extends Circle{
     int tbo;
     int tex_tbo;
     static boolean useFakeLightning = false;
+    //benda besar = 0, benda kecil = 1
+    int flag;
     public Sphere(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices,
                   Vector4f color, List<Float> centerPoint,
-                  Float radiusX, Float radiusY, Float radiusZ, String filename, String texture) {
+                  Float radiusX, Float radiusY, Float radiusZ, String filename, String texture, int flag) {
         super(shaderModuleDataList, vertices, color, centerPoint, radiusX, radiusY);
         this.radiusZ = radiusZ;
+        this.flag = flag;
 //        createBox();
 
         /**
@@ -343,6 +346,22 @@ public class Sphere extends Circle{
         }
         Vector3i facesVec = new Vector3i(pos, coords, normal);
         faces.add(facesVec);
+    }
+
+    //simple collision
+    public boolean calculateDistance(Sphere vec1) {
+        float dx = this.updateCenterPoint().x - vec1.updateCenterPoint().x;
+        float dy = this.updateCenterPoint().y - vec1.updateCenterPoint().y;
+        float dz = this.updateCenterPoint().z - vec1.updateCenterPoint().z;
+        float res = (float) Math.sqrt(dx * dx + dy * dy + dz * dz);
+        if (vec1.getFlag() == 0){
+            return !(res > 20);
+        }
+        return !(res > 3);
+    }
+
+    public int getFlag() {
+        return flag;
     }
 
     public void createBox(){

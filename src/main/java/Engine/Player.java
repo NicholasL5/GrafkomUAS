@@ -25,8 +25,8 @@ public class Player extends Sphere{
     private Vector3f rotation;
 
     public Player(List<ShaderModuleData> shaderModuleDataList, List<Vector3f> vertices, Vector4f color,
-                  List<Float> centerPoint, Float radiusX, Float radiusY, Float radiusZ, String filename, String texture) {
-        super(shaderModuleDataList, vertices, color, centerPoint, radiusX, radiusY, radiusZ, filename, texture);
+                  List<Float> centerPoint, Float radiusX, Float radiusY, Float radiusZ, String filename, String texture, int flag) {
+        super(shaderModuleDataList, vertices, color, centerPoint, radiusX, radiusY, radiusZ, filename, texture, flag);
         position = new Vector3f(centerPoint.get(0), centerPoint.get(1), centerPoint.get(2));
         rotation = new Vector3f(0,0,0);
     }
@@ -108,6 +108,6 @@ public class Player extends Sphere{
 
     public void addRotation(Vector3f rotate){
         rotation.add(rotate);
-        System.out.println(rotation.y);
+//        System.out.println(rotation.y);
     }
 }
