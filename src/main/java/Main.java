@@ -424,6 +424,7 @@ public class Main {
                         "D:\\projects\\java\\GrafkomKelasLampu\\GrafkomKelas\\resources\\textures\\Base_Color_Black.png"
                 )
         );
+
         objects.get(10).scaleObject(2.5f,2.5f,2.5f);
         objects.get(10).translateObject(-4.240E+2f,  0.000E+0f, -3.101E+2f);
 
