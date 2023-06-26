@@ -699,6 +699,9 @@ public class Main {
                 float znow = (float) ((-sub.x * Math.sin((float) -Math.toRadians(displayVector.y * 0.1f))) +
                         (sub.z * Math.cos((float) -Math.toRadians(displayVector.y * 0.1f))));
 
+
+
+
                 camera.setPosition(xnow + target.x, ynow + target.y, znow + target.z);
             }
         }

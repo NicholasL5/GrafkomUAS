@@ -11,6 +11,7 @@ uniform DirLight dirLight;
 
 struct PointLight{
     vec3 position;
+    vec3 lampColor;
 
     float constant;
     float linear;
@@ -54,7 +55,6 @@ in vec3 FragPos;
 in float visibility;
 uniform vec3 skyColor;
 
-uniform vec3 lampColor;
 
 
 vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir){
@@ -88,8 +88,8 @@ vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
     vec3 diffuse  = light.diffuse  * diff;
     vec3 specular = light.specular * spec;
     ambient  *= attenuation;
-    diffuse  *= attenuation * lampColor;
-    specular *= attenuation * lampColor;
+    diffuse  *= attenuation * light.lampColor ;
+    specular *= attenuation * light.lampColor ;
     return (ambient + diffuse + specular);
 }
 vec3 CalcSpotLight(SpotLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
