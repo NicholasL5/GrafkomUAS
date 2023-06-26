@@ -113,8 +113,8 @@ public class Camera {
     }
 
     public void check(){
-        if (position.y < Terrain.MIN_HEIGHT){
-            position.y = Terrain.MIN_HEIGHT + 0.1f;
+        if (position.y < 0){
+            position.y = 0 + 0.1f;
         }
     }
 
